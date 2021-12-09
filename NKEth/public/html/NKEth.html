@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <!-- 新 Bootstrap4 核心 CSS 文件 -->
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/4.1.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css">
+    <link rel="stylesheet" href="/css/NKEth.css">
+    <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+    <!-- popper.min.js 用于弹窗、提示、下拉菜单 -->
+    <script src="https://cdn.bootcss.com/popper.js/1.12.5/umd/popper.min.js"></script>
+    <!-- 最新的 Bootstrap4 核心 JavaScript 文件 -->
+    <script src="https://cdn.bootcss.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+    <script src="/js/graph.js"></script>
+    <title>A blockchain-based IoT anomaly detection system</title>
+</head>
+
+<body>
+    <!-- Page Container -->
+    <div class="Page-container">
+        <!-- Sidebar -->
+        <div class="Sidebar">
+            <ul class="nav">
+                <!-- Sidebar - Brand -->
+                <a herf="">
+                    <div class="Sidebar-brand">
+                        <img src="/img/bc.png" height="100%">
+                    </div>
+                    <div class="Sidebar-brand-text">NKETH</div>
+                </a>
+                <!-- Divider-->
+                <hr class="Sidebar-divider">
+                <!-- Heading -->
+                <div class="Sidebar-heading">
+                    Blockchain
+                </div>
+                <!-- Nav Item - Blocks -->
+                <li>
+                    <a herf="" class="nav-link">
+                        <i class="nav-link-i fa fa-th-large text-gray-300"></i>
+                        <span class="nav-link-span">Blocks</span>
+                    </a>
+                </li>
+                <!-- Nav Item - Transactions -->
+                <li>
+                    <a herf="" class="nav-link">
+                        <i class="nav-link-i fa fa-reply-all text-gray-300"></i>
+                        <span class="nav-link-span">Transactions</span>
+                    </a>
+                </li>
+                <!-- Divider-->
+                <hr class="Sidebar-divider">
+                <!-- Heading -->
+                <div class="Sidebar-heading">
+                    System
+                </div>
+                <!-- Nav Item - Workflow -->
+                <li>
+                    <a herf="" class="nav-link">
+                        <i class="nav-link-i fa fa-ravelry text-gray-300"></i>
+                        <span class="nav-link-span">Workflow</span>
+                    </a>
+                </li>
+                <!-- Nav Item - Network topology -->
+                <li>
+                    <a herf="" class="nav-link">
+                        <i class="nav-link-i fa fa-sitemap text-gray-300"></i>
+                        <span class="nav-link-span">Topology</span>
+                    </a>
+                </li>
+                <!-- Divider-->
+                <hr class="Sidebar-divider">
+            </ul>
+        </div>
+        <!-- End of Sidebar -->
+        <!-- Content Container -->
+        <div class="content-container">
+            <!-- Topbar -->
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col">
+                        <nav class="topbar shadow navbar navbar-default px-4 py-3 mb-4">
+                            <div>
+                                <form class="navbar-form navbar-left">
+                                    <div class="navbar-form-group form-group">
+                                        <input type="text" class="border-0 form-control" placeholder="Search for...">
+                                    </div>
+                                    <div class="navbar-form-btn">
+                                        <button type="submit" class="search-btn btn btn-default">
+                                            <i class="fa fa-search fa-sm"></i>
+                                        </button>
+                                    </div>
+                                </form>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <!-- End of Topbar -->
+            <!-- Begin Main Content -->
+            <div class="mx-3 mb-4">
+                <h1 class="h5 text-gray-800 mb-0">Blockchain parameters</h1>
+            </div>
+            <!-- Card -->
+            <div class="container-fluid">
+                <div class="row">
+                    <!-- Card1 -->
+                    <div class="col-xl-3 col-md-6 mb-4">
+                        <div class="border-left-primary card shadow py-2">
+                            <div class="card-body">
+                                <div class="row no-gutters align-items-center">
+                                    <div class="col mr-2">
+                                        <div class="text-style text-primary mb-1">Number of Blocks</div>
+                                        <div class="h6 mb-0 font-weight-bold text-gray-800" id="BlockNumber">9206338
+                                        </div>
+                                    </div>
+                                    <div class="col-auto">
+                                        <i class="fa fa-th-large fa-2x text-gray-300"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End of Card1 -->
+                    <!-- Card2 -->
+                    <div class="col-xl-3 col-md-6 mb-4">
+                        <div class="border-left-success card shadow py-2">
+                            <div class="card-body">
+                                <div class="row no-gutters align-items-center">
+                                    <div class="col mr-2">
+                                        <div class="text-style text-success mb-1">Number of Peers.</div>
+                                        <div class="h6 mb-0 font-weight-bold text-gray-800" id="PeerCount">18</div>
+                                    </div>
+                                    <div class="col-auto">
+                                        <i class="fa fa-reply-all fa-2x text-gray-300"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End of Card2 -->
+                    <!-- Card3 -->
+                    <div class="col-xl-3 col-md-6 mb-4">
+                        <div class="border-left-info card shadow py-2">
+                            <div class="card-body">
+                                <div class="row no-gutters align-items-center">
+                                    <div class="col mr-2">
+                                        <div class="text-style text-info mb-1">Hash Rate</div>
+                                        <div class="h6 mb-0 font-weight-bold text-gray-800" id="HashRate">108 EH/s</div>
+                                    </div>
+                                    <div class="col-auto">
+                                        <i class="fa fa-users fa-2x text-gray-300"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End of Card3 -->
+                    <!-- Card4 -->
+                    <div class="col-xl-3 col-md-6 mb-4">
+                        <div class="border-left-warning card shadow py-2">
+                            <div class="card-body">
+                                <div class="row no-gutters align-items-center">
+                                    <div class="col mr-2">
+                                        <div class="text-style text-warning mb-1">Gas Price</div>
+                                        <div class="h6 mb-0 font-weight-bold text-gray-800" id="GasPrice">146281.70 Gwei
+                                        </div>
+                                    </div>
+                                    <div class="col-auto">
+                                        <i class="fa fa-calculator fa-2x text-gray-300"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End of Card4 -->
+                </div>
+            </div>
+            <!-- End of Card -->
+            <!-- System Card -->
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-6 col-xl-6 col-lg-6">
+                        <div class="card shadow mb-4">
+                            <div class="card-header py-3">
+                                <h7 class="m-0 text-primary">Normal workflow</h7>
+                            </div>
+                            <div class="card-body text-center">
+                                <canvas id="WFgraph">
+                                </canvas>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-6 col-xl-6 col-lg-6">
+                        <div class="card shadow mb-4">
+                            <div class="card-header py-3">
+                                <h7 class="m-0 text-primary">Anomaly occurred</h7>
+                            </div>
+                            <div class="card-body text-center" style="overflow-y: scroll; overflow-x: scroll; width:100%; height: 446px;">
+                                <table class="table table-bordered dataTable">
+                                    <thead>
+                                        <trrole="row">
+                                            <th>LLK</th>
+                                            <th>CLK</th>
+                                            <th>Address</th>
+                                            <th>Time</th>
+                                            </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr role="row" class="odd">
+                                            <td id="llk1">E5</td>
+                                            <td id="clk1">E6</td>
+                                            <td id="address1">0x8b304e9e9b79b9e1f73e93f9f349d765865ae1864bf98</td>
+                                            <td id="time1">2020-01-04 11:34:41</td>
+                                        </tr>
+                                        <tr role="row" class="even">
+                                            <td id="llk2">E5</td>
+                                            <td id="clk2">E6</td>
+                                            <td id="address2">0x8b304e9e9b79b9e1f73e93f9f349d765865ae1864bf98</td>
+                                            <td id="time2">2020-01-04 11:34:41</td>
+                                        </tr>
+                                        <tr role="row" class="odd">
+                                            <td id="llk3">E5</td>
+                                            <td id="clk3">E6</td>
+                                            <td id="address3">0x8b304e9e9b79b9e1f73e93f9f349d765865ae1864bf98</td>
+                                            <td id="time3">2020-01-04 11:34:41</td>
+                                        </tr>
+                                        <tr role="row" class="even">
+                                            <td id="llk4">E5</td>
+                                            <td id="clk4">E6</td>
+                                            <td id="address4">0x8b304e9e9b79b9e1f73e93f9f349d765865ae1864bf98</td>
+                                            <td id="time4">2020-01-04 11:34:41</td>
+                                        </tr>
+                                        <tr role="row" class="odd">
+                                            <td id="llk5">E5</td>
+                                            <td id="clk5">E6</td>
+                                            <td id="address5">0x8b304e9e9b79b9e1f73e93f9f349d765865ae1864bf98</td>
+                                            <td id="time5">2020-01-04 11:34:41</td>
+                                        </tr>
+                                        <tr role="row" class="even">
+                                            <td id="llk6">E5</td>
+                                            <td id="clk6">E6</td>
+                                            <td id="address6">0x8b304e9e9b79b9e1f73e93f9f349d765865ae1864bf98</td>
+                                            <td id="time6">2020-01-04 11:34:41</td>
+                                        </tr>
+                                        <tr role="row" class="odd">
+                                            <td id="llk7">E5</td>
+                                            <td id="clk7">E6</td>
+                                            <td id="address7">0x8b304e9e9b79b9e1f73e93f9f349d765865ae1864bf98</td>
+                                            <td id="time7">2020-01-04 11:34:41</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End of System Card -->
+            <!-- Trans. Card -->
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="card shadow mb-4">
+                            <div class="card-header py-3">
+                                <h7 class="m-0 text-primary">Recent Blocks</h7>
+                            </div>
+                            <div class="card-body">
+                                <div class="dataTables_wrapper dt-bootstrap4">
+                                    <div class="row">
+                                        <div class="col-sm-12" style="overflow-y: scroll; overflow-x: scroll; width:100%; height: 580px;">
+                                            <table class="table table-bordered dataTable">
+                                                <thead>
+                                                    <tr role="row">
+                                                        <th>#Block</th>
+                                                        <th>Hash</th>
+                                                        <th>#Tx</th>
+                                                        <th>Time</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr role="row" class="odd">
+                                                        <td id="block-no1">9211431</td>
+                                                        <td id="block-hash1">0x8b304e9e9b79b9e1f73e93f9f349d765865ae1864bf9851183cb2ada5dff6a60</td>
+                                                        <td id="block-tx1">69</td>
+                                                        <td id="block-time1">2020-01-04 11:34:41</td>
+                                                    </tr>
+                                                    <tr role="row" class="even">
+                                                        <td id="block-no2">9211430</td>
+                                                        <td id="block-hash2">0x96679ff1f8e48840dfb0a30feefeeb2ba268052cdd2ae7614e1415a1d6d16479</td>
+                                                        <td id="block-tx2">80</td>
+                                                        <td id="block-time2">2020-01-04 11:34:17</td>
+                                                    </tr>
+                                                    <tr role="row" class="odd">
+                                                        <td id="block-no3">9211429</td>
+                                                        <td id="block-hash3">0x4a24c28ea0d5e81b977e4f279ea075c8feaaa814a97f4e1b365ce580aacbbdef</td>
+                                                        <td id="block-tx3">83</td>
+                                                        <td id="block-time3">2020-01-04 11:34:11</td>
+                                                    </tr>
+                                                    <tr role="row" class="even">
+                                                        <td id="block-no4">9211430</td>
+                                                        <td id="block-hash4">0x96679ff1f8e48840dfb0a30feefeeb2ba268052cdd2ae7614e1415a1d6d16479</td>
+                                                        <td id="block-tx4">80</td>
+                                                        <td id="block-time4">2020-01-04 11:34:17</td>
+                                                    </tr>
+                                                    <tr role="row" class="odd">
+                                                        <td id="block-no5">9211431</td>
+                                                        <td id="block-hash5">0x8b304e9e9b79b9e1f73e93f9f349d765865ae1864bf9851183cb2ada5dff6a60</td>
+                                                        <td id="block-tx5">69</td>
+                                                        <td id="block-time5">2020-01-04 11:34:41</td>
+                                                    </tr>
+                                                    <tr role="row" class="even">
+                                                        <td id="block-no6">9211430</td>
+                                                        <td id="block-hash6">0x96679ff1f8e48840dfb0a30feefeeb2ba268052cdd2ae7614e1415a1d6d16479</td>
+                                                        <td id="block-tx6">80</td>
+                                                        <td id="block-time6">2020-01-04 11:34:17</td>
+                                                    </tr>
+                                                    <tr role="row" class="odd">
+                                                        <td id="block-no7">9211431</td>
+                                                        <td id="block-hash7">0x8b304e9e9b79b9e1f73e93f9f349d765865ae1864bf9851183cb2ada5dff6a60</td>
+                                                        <td id="block-tx7">69</td>
+                                                        <td id="block-time7">2020-01-04 11:34:41</td>
+                                                    </tr>
+                                                    <tr role="row" class="even">
+                                                        <td id="block-no8">9211430</td>
+                                                        <td id="block-hash8">0x96679ff1f8e48840dfb0a30feefeeb2ba268052cdd2ae7614e1415a1d6d16479</td>
+                                                        <td id="block-tx8">80</td>
+                                                        <td id="block-time8">2020-01-04 11:34:17</td>
+                                                    </tr>
+                                                    <tr role="row" class="odd">
+                                                        <td id="block-no9">9211431</td>
+                                                        <td id="block-hash9">0x8b304e9e9b79b9e1f73e93f9f349d765865ae1864bf9851183cb2ada5dff6a60</td>
+                                                        <td id="block-tx9">69</td>
+                                                        <td id="block-time9">2020-01-04 11:34:41</td>
+                                                    </tr>
+                                                    <tr role="row" class="even">
+                                                        <td id="block-no10">9211430</td>
+                                                        <td id="block-hash10">0x96679ff1f8e48840dfb0a30feefeeb2ba268052cdd2ae7614e1415a1d6d16479</td>
+                                                        <td id="block-tx10">80</td>
+                                                        <td id="block-time10">2020-01-04 11:34:17</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End of Trans. Card -->
+            <!-- End of Main Content -->
+            <!-- Footer -->
+            <footer class="sticky-footer bg-white">
+                <div class="container my-auto">
+                    <div class="copyright text-center my-auto">
+                        <span>Copyright &copy; JianZhaolong 2020 / Powered by NKICS</span>
+                    </div>
+                </div>
+            </footer>
+            <!-- End of Footer -->
+        </div>
+        <!-- End of Content Container -->
+    </div>
+    <!-- End of Page Container -->
+    <script src="/js/index.js"></script>
+</body>
+
+</html>
